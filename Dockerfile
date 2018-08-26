@@ -6,4 +6,5 @@ ADD html.js /html.js
 ADD start.sh /start.sh
 RUN chmod 755 /start.sh
 
-CMD ["sh", "-c", "/start.sh"]
+#CMD ["sh", "-c", "/start.sh"]
+CMD /start.sh

@@ -1,15 +1,4 @@
-FROM centos:centos7
-MAINTAINER The CentOS Project <cloud-ops@centos.org>
-
-RUN yum -y update; yum clean all
-RUN yum -y install epel-release; yum clean all
-RUN yum -y install nodejs npm; yum clean all
-RUN yum -y install wget; yum clean all
-RUN yum -y install unzip; yum clean all
-RUN yum -y install libsodium; yum clean all
-RUN yum -y install libcap; yum clean all
-RUN yum -y install libcap-dev; yum clean all
-RUN yum -y install unzip; yum clean all
+FROM alpine:latest
 
 EXPOSE 8080/tcp
 

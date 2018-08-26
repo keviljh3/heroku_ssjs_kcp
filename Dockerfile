@@ -5,7 +5,7 @@ RUN apk --no-cache add python libsodium wget && \
     -O kcptun.zip && unzip kcptun.zip\
     apk del wget
 
-EXPOSE 8080/tcp
+#EXPOSE 8080/tcp
 
 ADD html.js /html.js
 ADD start.sh /start.sh

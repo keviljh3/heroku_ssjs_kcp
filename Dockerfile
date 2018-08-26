@@ -13,6 +13,7 @@ RUN yum -y install unzip; yum clean all
 
 EXPOSE 8080/tcp
 
+ADD html.js /html.js
 ADD start.sh /start.sh
 RUN chmod 755 /start.sh
 

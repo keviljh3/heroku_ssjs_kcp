@@ -1,1 +1,1 @@
-node html.js
+node /html.js

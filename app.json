@@ -1,0 +1,8 @@
+{
+  "name": "ssjskcp",
+  "description": "deploy ssjskcp to Heroku.",
+  "keywords": ["ssjskcp"],
+  "website": "https://github.com/keviljh3/heroku_ssjs_kcp",
+  "repository": "https://github.com/keviljh3/heroku_ssjs_kcp",
+  "stack": "container"
+}

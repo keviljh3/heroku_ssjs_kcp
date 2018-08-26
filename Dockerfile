@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM heroku/heroku:18
 
 EXPOSE 8080/tcp
 

@@ -5,7 +5,7 @@ ENV WORKSPACE_DIR="/app/builds" \
     S3_BUCKET="lang-python" \
     S3_PREFIX="heroku-18/"
 
-RUN apt-get update && apt-get install -y python-pip && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y node && apt-get install -y python-pip && rm -rf /var/lib/apt/lists/*
 
 EXPOSE 8080
 

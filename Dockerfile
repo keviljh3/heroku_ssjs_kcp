@@ -13,6 +13,6 @@ ADD html.js /app/html.js
 ADD start.sh /app/start.sh
 RUN chmod +x /app/start.sh
 #CMD node html.js
-CMD python -m SimpleHTTPServer 8080
+CMD python -m SimpleHTTPServer $PORT
 #CMD ["sh", "-c", "/start.sh"]
 #CMD /start.sh

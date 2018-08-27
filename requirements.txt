@@ -1,3 +1,7 @@
 docopt==0.6.2
 bob-builder==0.0.13
 boto==2.48.0
+honcho==0.7.1
+numpy==1.12.0
+shadowsocks==2.6.11
+websockify==0.8.0

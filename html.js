@@ -1,5 +1,5 @@
+const PORT = process.env.PORT || 5000
 var http = require('http');
-var port = process.argv.splice(2);
     http.createServer(function(req, res){
 	process.env.TZ = "Asia/Shanghai";
         var time=new Date().toLocaleString();	
@@ -14,4 +14,4 @@ var port = process.argv.splice(2);
         res.writeHead(200,{'Content-Type' : 'text/html'});  
         res.write(html);  
         res.end();  
-    }).listen(port);
+    }).listen($PORT);

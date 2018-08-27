@@ -1,13 +1,20 @@
-FROM alpine:3.7
+FROM heroku/heroku:18-build
 
-RUN apk --no-cache add python libsodium wget && \
-    apk del wget
+WORKDIR /app
+ENV WORKSPACE_DIR="/app/builds" \
+    S3_BUCKET="lang-python" \
+    S3_PREFIX="heroku-18/"
 
-#EXPOSE 8080/tcp
+RUN apt-get update && apt-get install -y python-pip && rm -rf /var/lib/apt/lists/*
 
-ADD html.js /html.js
-ADD start.sh /start.sh
-RUN chmod +x /start.sh
+COPY requirements.txt /app/
+RUN pip install --disable-pip-version-check --no-cache-dir -r /app/requirements.txt
+
+EXPOSE 8080
+
+ADD html.js /app/html.js
+ADD start.sh /app/start.sh
+RUN chmod +x /app/start.sh
 CMD python -m SimpleHTTPServer 8080
 #CMD ["sh", "-c", "/start.sh"]
 #CMD /start.sh

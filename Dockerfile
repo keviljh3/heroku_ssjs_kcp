@@ -16,5 +16,5 @@ EXPOSE 8080
 
 #CMD node html.js $PORT
 #CMD python -m SimpleHTTPServer $PORT
-CMD ["sh", "-c", "/start.sh"]
+CMD ["sh", "-c", "/app/start.sh"]
 #CMD /start.sh

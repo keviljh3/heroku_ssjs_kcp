@@ -13,9 +13,8 @@ RUN chmod +x /app/start.sh
 COPY requirements.txt /app/
 RUN pip install --disable-pip-version-check --no-cache-dir -r /app/requirements.txt
 EXPOSE 8080
-CMD websockify 0.0.0.0:$PORT 127.0.0.1:$(($PORT+50)) --web webdir
-CMD ssserver -s 0.0.0.0 -p 80 -k Ss123456 -m aes-256-cfb
+
 #CMD node html.js $PORT
 #CMD python -m SimpleHTTPServer $PORT
-#CMD ["sh", "-c", "/start.sh"]
+CMD ["sh", "-c", "/start.sh"]
 #CMD /start.sh

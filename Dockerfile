@@ -7,11 +7,12 @@ ENV WORKSPACE_DIR="/app/builds" \
 
 RUN apt-get update && apt-get install -y nodejs && apt-get install -y python-pip && rm -rf /var/lib/apt/lists/*
 
-EXPOSE 8080
-
 ADD html.js /app/html.js
 ADD start.sh /app/start.sh
 RUN chmod +x /app/start.sh
+COPY requirements.txt /app/
+RUN pip install --disable-pip-version-check --no-cache-dir -r /app/requirements.txt
+EXPOSE 8080
 #CMD node html.js $PORT
 #CMD python -m SimpleHTTPServer $PORT
 CMD ["sh", "-c", "/start.sh"]

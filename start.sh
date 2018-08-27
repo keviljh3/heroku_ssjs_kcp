@@ -1,1 +1,1 @@
-node /app/html.js $PORT
+node /app/html.js

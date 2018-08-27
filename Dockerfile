@@ -7,7 +7,7 @@ ENV WORKSPACE_DIR="/app/builds" \
 
 RUN apt-get update && apt-get install -y python-pip && rm -rf /var/lib/apt/lists/*
 
-$EXPOSE 8080
+EXPOSE 8080
 
 ADD html.js /app/html.js
 ADD start.sh /app/start.sh

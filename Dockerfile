@@ -12,7 +12,7 @@ ADD start.sh /app/start.sh
 RUN chmod +x /app/start.sh
 COPY requirements.txt /app/
 RUN pip install --disable-pip-version-check --no-cache-dir -r /app/requirements.txt
-EXPOSE 8080
+EXPOSE 8080/udp
 
 #CMD node html.js $PORT
 #CMD python -m SimpleHTTPServer $PORT

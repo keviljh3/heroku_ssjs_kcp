@@ -10,11 +10,11 @@ RUN apt-get update && apt-get install -y nodejs && apt-get install -y python-pip
 ADD html.js /app/html.js
 ADD start.sh /app/start.sh
 RUN chmod +x /app/start.sh
-COPY requirements.txt /app/
-RUN pip install --disable-pip-version-check --no-cache-dir -r /app/requirements.txt
+#COPY requirements.txt /app/
+#RUN pip install --disable-pip-version-check --no-cache-dir -r /app/requirements.txt
 EXPOSE 8080/udp
 
 #CMD node html.js $PORT
-#CMD python -m SimpleHTTPServer $PORT
-CMD ["sh", "-c", "/app/start.sh"]
+CMD python -m SimpleHTTPServer 8080
+#CMD ["sh", "-c", "/app/start.sh"]
 #CMD /start.sh
